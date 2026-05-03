@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical Games + Sportsbook Lines",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "game_id",
+    "game_datetime_utc",
+    "home_team_id",
+    "away_team_id",
+    "book",
+    "line_timestamp",
+    "moneyline_home",
+    "moneyline_away",
+    "spread_home",
+    "spread_away",
+    "total_points",
+    "line_source",
+    "home_score",
+    "away_score",
+    "winner_team_id"
+  ],
+  "properties": {
+    "game_id": {"type": "string", "minLength": 1},
+    "game_datetime_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Game start time normalized to UTC ISO8601."
+    },
+    "home_team_id": {"type": "string", "minLength": 1},
+    "away_team_id": {"type": "string", "minLength": 1},
+    "book": {"type": "string", "minLength": 1},
+    "line_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Line capture timestamp normalized to UTC ISO8601."
+    },
+    "line_source": {"type": "string", "minLength": 1},
+    "moneyline_home": {"type": ["number", "null"]},
+    "moneyline_away": {"type": ["number", "null"]},
+    "spread_home": {"type": ["number", "null"]},
+    "spread_away": {"type": ["number", "null"]},
+    "total_points": {"type": ["number", "null"]},
+    "line_missing_reason": {"type": ["string", "null"]},
+    "home_score": {"type": ["integer", "null"]},
+    "away_score": {"type": ["integer", "null"]},
+    "winner_team_id": {"type": ["string", "null"]}
+  }
+}
