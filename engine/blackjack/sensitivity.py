@@ -19,7 +19,7 @@ from dataclasses import dataclass, field
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
 from .analyzer import Analyzer, RoundResult
-from .cards import ACE, DECK_COMPOSITION, NUM_RANKS, RANKS, TEN, Shoe
+from .cards import DECK_COMPOSITION, NUM_RANKS, RANKS, Shoe
 from .rules import RuleSet
 from .strategy import BasicStrategy
 

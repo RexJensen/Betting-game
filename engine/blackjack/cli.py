@@ -11,14 +11,13 @@ from __future__ import annotations
 
 import argparse
 import sys
-from typing import Dict, List, Optional, Sequence
+from typing import Dict, Optional, Sequence
 
 from .analyzer import Analyzer
-from .cards import ACE, NUM_RANKS, RANKS, TEN, TWO_CARD_STATE, Shoe
+from .cards import ACE, RANKS, TEN, TWO_CARD_STATE, Shoe
 from .rules import RuleSet
 from .sensitivity import (COUNT_SYSTEMS, Evaluator, SensitivityReport,
                           apply_deltas, base_counts, evaluate_shoe,
-                          find_threshold, make_strategy,
                           find_thresholds, sensitivity_report, sweep)
 from .strategy import ACTION_LETTERS, BasicStrategy
 
@@ -214,6 +213,8 @@ def cmd_sweep(args: argparse.Namespace) -> int:
         print("  %+5d    %8d      %+.6f    %+8.4f%%   %+8.4f pts%s"
               % (delta, counts[args.rank] + delta, ev, -100 * ev,
                  100 * (ev - baseline), marker))
+    print()
+    print("  A negative house edge is a player advantage.")
     return 0
 
 

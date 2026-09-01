@@ -28,8 +28,7 @@ from .cards import (ACE, BUST, EMPTY_STATE, HAND_TRANSITION, NUM_RANKS, RANKS,
                     TEN, TWO_CARD_STATE, Shoe, state_is_soft, state_total)
 from .dealer import Dealer
 from .rules import RuleSet
-from .strategy import (BasicStrategy, DOUBLE, HIT, SPLIT, STAND, SURRENDER,
-                       ACTION_NAMES)
+from .strategy import BasicStrategy, DOUBLE, HIT, SPLIT, STAND, SURRENDER
 
 
 @dataclass

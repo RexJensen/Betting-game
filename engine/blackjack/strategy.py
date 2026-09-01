@@ -9,7 +9,7 @@ legal action for a specific hand.
 
 from __future__ import annotations
 
-from typing import Dict, List, Optional, Sequence
+from typing import Dict, Optional
 
 from .cards import ACE, NUM_RANKS, RANKS, TEN, state_is_soft, state_total
 from .rules import RuleSet

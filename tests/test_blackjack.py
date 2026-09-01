@@ -431,7 +431,7 @@ def test_removal_effects_rescale_to_griffins_single_deck_table(single_deck_repor
                  SIX: 0.46, SEVEN: 0.28, EIGHT: 0.00, NINE: -0.18, TEN: -0.51}
     for rank, expected in published.items():
         got = 100 * single_deck_report.effects[rank].removal_effect
-        assert got == pytest.approx(expected, abs=0.09), RANKS[rank]
+        assert got == pytest.approx(expected, abs=0.05), RANKS[rank]
 
 
 def test_adding_a_card_is_the_mirror_of_removing_one(six_deck_report):
